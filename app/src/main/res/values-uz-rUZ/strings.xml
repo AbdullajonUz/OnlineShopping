@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">InternetDokon</string>
+    <string name="account">Foydalanuvchi</string>
+    <string name="all">Hammasi</string>
+    <string name="brand">Brand</string>
+    <string name="cart">Savatcha</string>
+    <string name="category">Turi</string>
+    <string name="for_you">Siz uchun</string>
+    <string name="title_home">Uy</string>
+    <string name="top_charts">Top Mahsulotlar</string>
+</resources>

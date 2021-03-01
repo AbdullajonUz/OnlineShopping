@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/account"
+    app:startDestination="@id/navigation_account">
+
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="uz.abdullajon.onlineshopping.ui.account.AccountFragment"
+        android:label="@string/account"
+        tools:layout="@layout/fragment_account">
+        <action
+            android:id="@+id/action_navigation_account_to_navigation_order_history"
+            app:destination="@id/navigation_order_history" />
+        <action
+            android:id="@+id/action_navigation_account_to_navigation_cards"
+            app:destination="@id/navigation_cards" />
+        <action
+            android:id="@+id/action_navigation_account_to_navigation_edit_profile"
+            app:destination="@id/navigation_edit_profile" />
+        <action
+            android:id="@+id/action_navigation_account_to_navigation_track_order"
+            app:destination="@id/navigation_track_order" />
+        <action
+            android:id="@+id/action_navigation_account_to_shipping"
+            app:destination="@id/navigation_shipping" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_edit_profile"
+        android:name="uz.abdullajon.onlineshopping.ui.account.profile.EditProfileFragment"
+        android:label="@string/edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/navigation_cards"
+        android:name="uz.abdullajon.onlineshopping.ui.account.card.cardList.CardFragment"
+        android:label="@string/cards"
+        tools:layout="@layout/fragment_card" >
+        <action
+            android:id="@+id/action_navigation_cards_to_editCardFragment"
+            app:destination="@id/editCardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_order_history"
+        android:name="uz.abdullajon.onlineshopping.ui.account.order.OrderHistoryFragment"
+        android:label="@string/order_history"
+        tools:layout="@layout/fragment_order_history" />
+    <fragment
+        android:id="@+id/navigation_track_order"
+        android:name="uz.abdullajon.onlineshopping.ui.account.TrackOrderFragment"
+        android:label="@string/track_order"
+        tools:layout="@layout/fragment_track_order" />
+    <fragment
+        android:id="@+id/navigation_shipping"
+        android:name="uz.abdullajon.onlineshopping.ui.cart.adress.ShippingFragment"
+        android:label="shipping"
+        tools:layout="@layout/fragment_shipping" />
+    <fragment
+        android:id="@+id/editCardFragment"
+        android:name="uz.abdullajon.onlineshopping.ui.account.card.eidtCard.EditCardFragment"
+        android:label="EditCardFragment" />
+
+</navigation>

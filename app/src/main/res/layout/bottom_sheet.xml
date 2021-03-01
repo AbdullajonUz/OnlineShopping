@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/select_payment_method_menu_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="horizontal"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/pay_handle"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/next_button_style"
+        android:src="@drawable/ic_letter_p" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/next_button_style"
+        android:padding="8dp"
+        android:id="@+id/edit_cart_btn"
+        android:scaleType="centerInside"
+        android:src="@drawable/edit_card" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="0dp"
+        android:id="@+id/save_cart_btn"
+        android:layout_height="80dp"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/next_button_style"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/savecardpng" />
+</LinearLayout>
+

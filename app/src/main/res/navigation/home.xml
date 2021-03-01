@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="uz.abdullajon.onlineshopping.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_product_item"
+            app:destination="@id/navigation_product_item" />
+        <action
+            android:id="@+id/action_navigation_home_to_homeAFragment2"
+            app:destination="@id/homeAFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_product_item"
+        android:name="uz.abdullajon.onlineshopping.ui.home.product.ProductFragment"
+        android:label="@string/product"
+        tools:layout="@layout/fragment_product">
+
+        <action
+            android:id="@+id/action_navigation_product_item_to_reviewFragment"
+            app:destination="@id/reviewFragment" />
+
+        <argument
+            android:name="productId"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewFragment"
+        android:name="uz.abdullajon.onlineshopping.ui.home.review.ReviewFragment"
+        android:label="Review">
+        <action
+            android:id="@+id/action_reviewFragment_to_navigation_product_item"
+            app:destination="@id/navigation_product_item" />
+        <argument
+            android:name="productName"
+            android:defaultValue="null"
+            app:argType="string" />
+
+        <argument
+            android:name="productId"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeAFragment2"
+        android:name="uz.abdullajon.onlineshopping.ui.home.homeA.HomeAFragment"
+        android:label="Products">
+        <action
+            android:id="@+id/action_homeAFragment2_to_navigation_product_item"
+            app:destination="@id/navigation_product_item" />
+    </fragment>
+</navigation>

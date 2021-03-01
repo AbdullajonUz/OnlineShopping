@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/navigation_cart"
+    android:id="@+id/cart">
+
+    <fragment
+        android:id="@+id/navigation_cart"
+        android:name="uz.abdullajon.onlineshopping.ui.cart.CartFragment"
+        android:label="@string/cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_navigation_cart_to_shippingFragment"
+            app:destination="@id/shippingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shippingFragment"
+        android:name="uz.abdullajon.onlineshopping.ui.cart.adress.ShippingFragment"
+        android:label="Address" >
+        <action
+            android:id="@+id/action_shippingFragment_to_orderSummaryFragment"
+            app:destination="@id/orderSummaryFragment" />
+        <action
+            android:id="@+id/action_shippingFragment_to_cardCheckoutFragment"
+            app:destination="@id/cardCheckoutFragment" />
+        <action
+            android:id="@+id/action_shippingFragment_to_cardFragment"
+            app:destination="@id/cardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderSummaryFragment"
+        android:name="uz.abdullajon.onlineshopping.ui.cart.fullCheckout.OrderSummaryFragment"
+        android:label="Order Summary" />
+    <fragment
+        android:id="@+id/cardCheckoutFragment"
+        android:name="uz.abdullajon.onlineshopping.ui.cart.cardCheckout.CardCheckoutFragment"
+        android:label="Checkout" >
+        <action
+            android:id="@+id/action_cardCheckoutFragment_to_orderSummaryFragment"
+            app:destination="@id/orderSummaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardFragment"
+        android:name="uz.abdullajon.onlineshopping.ui.account.card.cardList.CardFragment"
+        android:label="Cards"
+        tools:layout="@layout/fragment_card" >
+        <action
+            android:id="@+id/action_cardFragment_to_orderSummaryFragment"
+            app:destination="@id/orderSummaryFragment" />
+    </fragment>
+
+</navigation>

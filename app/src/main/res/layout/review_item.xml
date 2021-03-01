@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/review_image"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_home_black_24dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/client_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/review_image"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Samuel Smith" />
+
+    <RatingBar
+        android:id="@+id/rating_bar"
+        style="?attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="86dp"
+        android:minWidth="86dp"
+        android:theme="@style/Widget.AppCompat.RatingBar.Small"
+        app:layout_constraintBottom_toBottomOf="@id/client_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/client_name"
+        tools:rating="4.3" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/review_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/client_name"
+        app:layout_constraintTop_toBottomOf="@id/client_name"
+        tools:text="Nike Dri-FIT is a polyester fabric designed to help you keep dry so you can more comfortably work harder, longer. Read More" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

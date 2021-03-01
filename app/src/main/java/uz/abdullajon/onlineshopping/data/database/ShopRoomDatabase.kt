@@ -13,7 +13,7 @@ import uz.abdullajon.onlineshopping.data.model.CartModel
 import uz.abdullajon.onlineshopping.data.model.CustomerCard
 import uz.abdullajon.onlineshopping.utils.BooleanToIntConverter
 
-
+//database
 @Database(
     entities = [CartModel::class, CustomerCard::class],
     version = 3
